@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Introduction
 
 [![GoDoc](https://godoc.org/github.com/elazarl/goproxy?status.svg)](https://godoc.org/github.com/elazarl/goproxy)
@@ -116,3 +117,5 @@ I believe it is good enough for usage.
 
 I'll try to keep reasonable backwards compatability. In case of a major API change,
 I'll change the import path.
+=======
+# goproxy
