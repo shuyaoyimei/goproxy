@@ -3,7 +3,6 @@ package goproxy
 import (
 	"encoding/base64"
 	"errors"
-	"fmt"
 	"log"
 	"net/http"
 	"strings"

@@ -2,7 +2,6 @@ package goproxy
 
 import (
 	"bufio"
-	"fmt"
 	"github.com/cihub/seelog"
 	"io"
 	"log"
