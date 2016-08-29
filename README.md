@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # Introduction
 
 [![GoDoc](https://godoc.org/github.com/elazarl/goproxy?status.svg)](https://godoc.org/github.com/elazarl/goproxy)
