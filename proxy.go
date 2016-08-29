@@ -2,6 +2,8 @@ package goproxy
 
 import (
 	"bufio"
+	"fmt"
+	"github.com/cihub/seelog"
 	"io"
 	"log"
 	"net"
@@ -93,6 +95,13 @@ func removeProxyHeaders(ctx *ProxyCtx, r *http.Request) {
 
 // Standard net/http function. Shouldn't be used directly, http.Serve will use it.
 func (proxy *ProxyHttpServer) ServeHTTP(w http.ResponseWriter, r *http.Request) {
+	errs := proxy.Auth(w, r)
+	if errs != nil {
+		seelog.Error(errs)
+		return
+	}
+	// defer fmt.Println("11111111")
+	r.Header.Del("Proxy-Authenticate")
 	//r.Header["X-Forwarded-For"] = w.RemoteAddr()
 	if r.Method == "CONNECT" {
 		proxy.handleHttps(w, r)
