@@ -100,7 +100,7 @@ func (proxy *ProxyHttpServer) ServeHTTP(w http.ResponseWriter, r *http.Request) 
 		return
 	}
 	// defer fmt.Println("11111111")
-	r.Header.Del("Proxy-Authenticate")
+	r.Header.Del("Proxy-Authorization")
 	//r.Header["X-Forwarded-For"] = w.RemoteAddr()
 	if r.Method == "CONNECT" {
 		proxy.handleHttps(w, r)
